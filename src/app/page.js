@@ -3,7 +3,6 @@ import Appbar from "@/components/Appbar";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Secondary from "@/components/Secondary";
-import Stickycursor from "@/components/stickyCursor";
 import { useRef } from "react";
 import ReactLenis from "lenis/react";
 import Third from "@/components/Third";
@@ -11,6 +10,7 @@ import VideoSec from "@/components/VideoSec";
 import { motion } from "framer-motion";
 import Socials from "@/components/Socials";
 import Projects from "@/components/Projects";
+import Stickycursor from "@/components/Stickycursor";
 
 export default function Home() {
   const stickyElement = useRef(null);
