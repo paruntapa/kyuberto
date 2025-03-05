@@ -2,6 +2,7 @@ import React, { forwardRef, useState } from "react";
 import Magnetic from "./Magnetic";
 import { Sheet, SheetTitle, SheetContent } from "@/components/ui/sheet";
 import { motion } from "motion/react";
+import UnderLineText from "./ui/UnderLineText";
 
 const Appbar = forwardRef(function index(props, ref) {
   const [isActive, setIsActive] = useState(false);
@@ -18,6 +19,7 @@ const Appbar = forwardRef(function index(props, ref) {
     "Twitter",
     "GitHub",
   ];
+
   const menu = ["What we do", "Projects", "Company", "Tutorials", "Contacts"];
 
   return (
@@ -152,8 +154,8 @@ const Appbar = forwardRef(function index(props, ref) {
                       Get in touch{" "}
                     </div>{" "}
                     <br />
-                    <span className="font-light text-[20px] pt-10 underline cursor-pointer  underline-offset-8 ">
-                      <div className=" cursor-pointer"> info@cuberto.com </div>
+                    <span className="font-light text-[20px] pt-10  cursor-pointer ">
+                      <div className=" cursor-pointer"> <UnderLineText>info@cuberto.com </UnderLineText></div>
                     </span>
                   </div>
                   <div className="">
@@ -215,8 +217,8 @@ const Appbar = forwardRef(function index(props, ref) {
                         </motion.a>
                       ))}
                     </div>
-                    <span className="font-light text-[20px] pt-10 underline  underline-offset-8 ">
-                      <div className=" cursor-pointer"> Our workflow </div>
+                    <span className="font-light text-[20px] pt-10 ">
+                      <div className=" cursor-pointer"> <UnderLineText>Our workflow </UnderLineText></div>
                     </span>
                   </div>
                 </div>
