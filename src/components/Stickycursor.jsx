@@ -92,7 +92,7 @@ const Stickycursor = ({ stickyElement }) => {
     <motion.div 
     transformTemplate={template}
     ref={cursorRef}
-    className={`fixed w-[15px] h-[15px]  ${ isHovered ? "bg-black/50": "bg-black"  }  rounded-full pointer-events-none`}
+    className={`fixed w-[15px] h-[15px]  ${ isHovered ? "bg-black": "bg-black"  } rounded-full pointer-events-none`}
     style={{left: smoothMouse.x, top: smoothMouse.y, scaleX: scale.x, scaleY: scale.y}}
     animate={{
         width: cursorSize,

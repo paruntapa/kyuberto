@@ -11,7 +11,11 @@ const Secondary = () => {
       fontFamily: 'PP',
     }}>
         <div className='h-screen flex justify-center items-center w-full '>
-          3d Image
+          <span className=' justify-between m-3 '> 
+            <video loop autoPlay muted width="500"  height="500" className='rounded-full '  preload="none">
+                  <source  src="/videos/2.mp4" type="video/mp4" />
+            </video>
+          </span> 
         </div>
         <div className='text-[33px] h-screen flex justify-start items-center w-full '>
           <div className='flex-col'>

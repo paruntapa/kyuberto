@@ -22,10 +22,11 @@ const Navbar = () => {
           <div className='grid grid-cols-2 ' style={{
                 fontFamily: 'PP',
               }}>
-            <div> 
-              <span className='text-gray-400 font-light' > Social media </span>
-              <div className="grid mt-10 grid-cols-1 space-y-4 mb-39" >
-                <span>LinkedIn</span>
+            <div className=''> 
+              <span className='text-gray-400 font-light group/nav-item' > Social media </span>
+              <div className="grid mt-10 grid-cols-1 space-y-4 mb-39 group-hover/nav-item:pl-4 transition duration-500" > 
+              <button className='hover:pl-4'>click here</button>
+                <span className='hover:pl-4 transition-all duration-500'>LinkedIn</span>
                 <span>Behance</span>
                 <span>Dribbble</span>
                 <span>Instagram</span>

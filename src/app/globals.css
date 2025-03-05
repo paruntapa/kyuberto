@@ -8,20 +8,32 @@
     src: url("/fonts/Matter-Light.ttf");
 
   }
+
+  @font-face {
+    font-family: "RO";
+    src: url("/fonts/Roboto/Roboto-Italic-VariableFont_wdth,wght.ttf");
+
+  }
   @font-face {
     font-family: "LP";
     src: url("/fonts/Matter-LightItalic.ttf");
 
   }
+  @font-face {
+    font-family: "RR";
+    src: url("/fonts/Matter-RegularItalic.ttf");
+
+  }
   html, body {
 }
 
-.fontItalic {
-  font-style: "LP";
+.line {
+  @apply overflow-hidden
 }
 
-.hfont {
-  font-family: "PP";
+
+.word {
+  @apply translate-y-full
 }
 
 :root {
