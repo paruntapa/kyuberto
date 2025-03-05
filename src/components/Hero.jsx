@@ -3,7 +3,6 @@ import { motion } from "motion/react";
 import gsap from "gsap";
 
 const Hero = () => {
-
   // useEffect(()=> {
   //   gsap.from("#start", {
   //     y:120,
@@ -18,54 +17,64 @@ const Hero = () => {
   //     }
   //   })
   // }, [])
-  
+
   return (
     <section className="">
-      <div 
+      <div
         id="start"
         className=" z-10 grid grid-cols-2 gap-10 text-center mt-29 m-10"
         style={{
           fontFamily: "PP",
         }}
       >
-        <div id="pratham" className=" z-10 cols-span-2 flex justify-start ml-[13%]  p-10 h-[80vh] w-[80vw] text-9xl">
-          <motion.span
-          
-          >
+        <div
+          id="pratham"
+          className=" z-10 cols-span-2 flex justify-start ml-[13%]  p-10 h-[80vh] w-[80vw] text-9xl"
+        >
+          <motion.span>
             <motion.span
-          initial={{ y:25, opacity: 0 }}
-          animate={{ y:0, opacity: 1 }}
-          transition={{ delay: 0.1, duration: 1, ease: "easeInOut"}}
+              initial={{ y: 25, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.1, duration: 1, ease: "easeInOut" }}
+            >
+              {" "}
+              We
+            </motion.span>
 
-          > We</motion.span>
+            <motion.span
+              initial={{ y: 25, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.7, duration: 1, ease: "easeInOut" }}
+            >
+              {" "}
+              are
+            </motion.span>
 
-          <motion.span
-          initial={{ y:25, opacity: 0 }}
-          animate={{ y:0, opacity: 1 }}
-          transition={{ delay: 0.7, duration: 1, ease: "easeInOut"}}
+            <motion.span
+              initial={{ y: 25, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.8, duration: 1, ease: "easeInOut" }}
+            >
+              {" "}
+              a
+            </motion.span>
 
-          > are</motion.span>
-          
-          <motion.span
-          initial={{ y:25, opacity: 0 }}
-          animate={{ y:0, opacity: 1 }}
-          transition={{ delay: 0.8, duration: 1, ease: "easeInOut"}}
-
-          > a</motion.span>
-
-          <motion.span
-          initial={{ y:25, opacity: 0 }}
-          animate={{ y:0, opacity: 1 }}
-          transition={{ delay: 0.9, duration: 1, ease: "easeInOut"}}
-
-          > digital</motion.span>
-           <br />
+            <motion.span
+              initial={{ y: 25, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.9, duration: 1, ease: "easeInOut" }}
+            >
+              {" "}
+              digital
+            </motion.span>
+            <br />
             <span className="flex flex-row justify-between">
-              <motion.span 
-              initial={{ scale: 0, opacity: 0 }}
-              animate={{ scale:1, opacity: 1 }}
-              transition={{ delay: 0.9, duration: 1, ease: "easeInOut"}}
-              className=" justify-between m-3 ">
+              <motion.span
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ delay: 0.9, duration: 1, ease: "easeInOut" }}
+                className=" justify-between m-3 "
+              >
                 {" "}
                 <video
                   loop
@@ -79,13 +88,12 @@ const Hero = () => {
                   <source src="/videos/1.mp4" type="video/mp4" />
                 </video>
               </motion.span>
-              <span
-              >
+              <span>
                 {" "}
                 <motion.span
-                initial={{ y: 50, opacity: 0 }}
-                animate={{ y:0, opacity: 1 }}
-                transition={{ delay: 0.9, duration: 1, ease: "easeInOut"}}
+                  initial={{ y: 50, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 0.9, duration: 1, ease: "easeInOut" }}
                   className="font-extralight"
                   style={{
                     fontFamily: "RO",
@@ -94,22 +102,22 @@ const Hero = () => {
                   design
                 </motion.span>{" "}
                 <motion.span
-              initial={{ y: 50, opacity: 0 }}
-              animate={{ y:0, opacity: 1 }}
-              transition={{ delay: 1, duration: 1, ease: "easeInOut"}}
-              >
-                and{" "}
-              </motion.span>
+                  initial={{ y: 50, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ delay: 1, duration: 1, ease: "easeInOut" }}
+                >
+                  and{" "}
+                </motion.span>
               </span>
             </span>
             <motion.span
-              initial={{ y: "-100%" , opacity: 0 }}
-              animate={{ y:0, opacity: 1 }}
-              transition={{ delay: 1, duration: 1, ease: "easeInOut"}}
-              >
-               motion agency
-              </motion.span>
-          </motion.span> 
+              initial={{ y: "-100%", opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 1, duration: 1, ease: "easeInOut" }}
+            >
+              motion agency
+            </motion.span>
+          </motion.span>
         </div>
       </div>
     </section>

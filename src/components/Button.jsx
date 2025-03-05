@@ -1,17 +1,16 @@
-import React from 'react'
-import FlipText from './FlipText';
+import React from "react";
+import FlipText from "./FlipText";
 
-
-const Button = ({children, url, className, padding}) => {
-    return (
-        <div className={`button-wrapper ${className}`}>
-            <button className="button2 w-full h-full">
-                <FlipText href={`${url}`} className={`w-full h-full ${padding}`}>
-                    {children}
-                </FlipText>
-            </button>
-            <style>
-                {`
+const Button = ({ children, url, className, padding }) => {
+  return (
+    <div className={`button-wrapper ${className}`}>
+      <button className="button2 w-full h-full">
+        <FlipText href={`${url}`} className={`w-full h-full ${padding}`}>
+          {children}
+        </FlipText>
+      </button>
+      <style>
+        {`
                     .button-wrapper {
                         display: inline-block;
                         transition: all 0.3s ease-in-out;
@@ -69,9 +68,9 @@ const Button = ({children, url, className, padding}) => {
                         transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
                     }
         `}
-            </style>
-        </div>
-    );
+      </style>
+    </div>
+  );
 };
 
 export default Button;

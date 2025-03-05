@@ -61,7 +61,7 @@ const Third = () => {
           </span>
         </span>
       </div>
-      
+
       <div
         id="video"
         className="flex gap-12 bottom-0 mr-70 justify-center pb-0 mb-0 min-h-[40vh] p-30  items-center"

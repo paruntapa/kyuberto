@@ -1,4 +1,4 @@
-"use client";;
+"use client";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 import React from "react";
@@ -25,7 +25,7 @@ export function SpinningText({
   reverse = false,
   radius = 5,
   transition,
-  variants
+  variants,
 }) {
   if (typeof children !== "string" && !Array.isArray(children)) {
     throw new Error("children must be a string or an array of strings");
@@ -45,7 +45,7 @@ export function SpinningText({
   const finalTransition = {
     ...BASE_TRANSITION,
     ...transition,
-    duration: (transition)?.duration ?? duration,
+    duration: transition?.duration ?? duration,
   };
 
   const containerVariants = {
@@ -67,28 +67,28 @@ export function SpinningText({
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      transition={finalTransition}>
+      transition={finalTransition}
+    >
       {letters.map((letter, index) => (
         <motion.span
           aria-hidden="true"
           key={`${index}-${letter}`}
           variants={itemVariants}
           className="absolute left-1/2 top-1/2 inline-block"
-          style={
-            {
-              "--index": index,
-              "--total": letters.length,
-              "--radius": radius,
+          style={{
+            "--index": index,
+            "--total": letters.length,
+            "--radius": radius,
 
-              transform: `
+            transform: `
                   translate(-50%, -50%)
                   rotate(calc(360deg / var(--total) * var(--index)))
                   translateY(calc(var(--radius, 5) * -1ch))
                 `,
 
-              transformOrigin: "center"
-            }
-          }>
+            transformOrigin: "center",
+          }}
+        >
           {letter}
         </motion.span>
       ))}

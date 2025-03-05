@@ -3,7 +3,6 @@ import { PlayIcon } from "lucide-react";
 import React, { useEffect } from "react";
 
 const VideoSec = () => {
-
   useEffect(() => {
     const cursor = document.querySelector("#vidcursor");
     const video = document.querySelector("#videos");
@@ -36,9 +35,12 @@ const VideoSec = () => {
         id="vidcursor"
         className="z-8 opacity-0  tranform  -translate-x-1/2 -translate-y-1/2  flex items-center justify-center h-[7vw] w-[7vw] rounded-full bg-white fixed left-0 top-0  "
       >
-        <h5 className="text-xl font-medium"> <PlayIcon/> </h5>
+        <h5 className="text-xl font-medium">
+          {" "}
+          <PlayIcon />{" "}
+        </h5>
       </div>
-      <div >
+      <div>
         <video
           loop
           autoPlay

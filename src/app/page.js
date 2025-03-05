@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Appbar from "@/components/Appbar";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
@@ -8,22 +8,20 @@ import { useRef } from "react";
 import ReactLenis from "lenis/react";
 import Third from "@/components/Third";
 import VideoSec from "@/components/VideoSec";
-import {motion} from "framer-motion"
+import { motion } from "framer-motion";
 import Socials from "@/components/Socials";
 import Projects from "@/components/Projects";
 
-
 export default function Home() {
-
   const stickyElement = useRef(null);
-  
+
   return (
     <ReactLenis root>
-    <span >
-      <motion.video
-      initial={{ scale: 0, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      transition={{  duration: 1, ease: "easeInOut"}}
+      <span>
+        <motion.video
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
           loop
           autoPlay
           muted
@@ -34,17 +32,16 @@ export default function Home() {
         >
           <source src="/videos/16.mp4" type="video/mp4" />
         </motion.video>
-        </span>
-    <Appbar ref={stickyElement} />
-    <Stickycursor stickyElement={stickyElement} />
-    <Navbar/>
-    <Hero /> 
-    <VideoSec />
-    <Secondary/>
-    <Third/>
-    <Projects/>
-    <Socials/>
-    
+      </span>
+      <Appbar ref={stickyElement} />
+      <Stickycursor stickyElement={stickyElement} />
+      <Navbar />
+      <Hero />
+      <VideoSec />
+      <Secondary />
+      <Third />
+      <Projects />
+      <Socials />
     </ReactLenis>
   );
 }

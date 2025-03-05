@@ -27,22 +27,22 @@ const Appbar = forwardRef(function index(props, ref) {
         fontFamily: "PP",
       }}
     >
-     
       <div className="h-[120px] overflow-hidden whitespace-nowrap  p-10 text-white  text-2xl font-semibold">
         <motion.h2
-        initial={{ x: "-100%", opacity: 0, }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut"}}
+          initial={{ x: "-100%", opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
         >
-        cuberto
+          cuberto
         </motion.h2>
       </div>
       <div className="flex gap-6 ">
-        <motion.span 
-        initial={{ y: "-100%", opacity: 0, }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut"}}
-        className="text-xl h-[120px] w-[120px] p-10 pl-20 relative text-white">
+        <motion.span
+          initial={{ y: "-100%", opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
+          className="text-xl h-[120px] w-[120px] p-10 pl-20 relative text-white"
+        >
           menu
         </motion.span>
         <Magnetic>
@@ -53,17 +53,16 @@ const Appbar = forwardRef(function index(props, ref) {
           >
             <div className="flex flex-col mt-2.5 mr-3 justify-between w-15 h-3   relative ">
               <motion.div
-                initial={{ x: "100%", opacity: 0, }}
+                initial={{ x: "100%", opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
-                transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut"}}
+                transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
                 className={`z-10 relative w-full before:content-[''] before:block before:h-[1px] before:w-[40%] before:bg-white before:absolute before:transition-transform before:duration-300 after:content-[''] after:block after:h-[1px] after:w-[40%] after:bg-white after:absolute after:transition-transform after:duration-300 
               ${
                 isActive
                   ? "before:rotate-45 before:top-[-1px] after:rotate-[-45deg] after:top-0 "
                   : "before:top-[5px] after:top-[-5px]"
               }`}
-              >
-              </motion.div>
+              ></motion.div>
             </div>
           </div>
         </Magnetic>

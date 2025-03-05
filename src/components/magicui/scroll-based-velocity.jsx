@@ -86,9 +86,15 @@ export function VelocityScroll({
   ...props
 }) {
   return (
-    <div className={cn("relative w-full overflow-hidden", className)} {...props}>
+    <div
+      className={cn("relative w-full overflow-hidden", className)}
+      {...props}
+    >
       {Array.from({ length: numRows }).map((_, i) => (
-        <ParallaxRow key={i} baseVelocity={defaultVelocity * (i % 2 === 0 ? 1 : -1)}>
+        <ParallaxRow
+          key={i}
+          baseVelocity={defaultVelocity * (i % 2 === 0 ? 1 : -1)}
+        >
           {children}
         </ParallaxRow>
       ))}
