@@ -71,11 +71,11 @@ const Third = () => {
       >
         <div
           id="cursor"
-          className="z-8 opacity-0  tranform  -translate-x-1/2 -translate-y-1/2  flex items-center justify-center h-[7vw] w-[7vw] rounded-full bg-white fixed left-0 top-0  "
+          className="z-8 opacity-0 cursor-pointer  tranform  -translate-x-1/2 -translate-y-1/2  flex items-center justify-center h-[7vw] w-[7vw] rounded-full bg-white fixed left-0 top-0  "
         >
           <h5 className="text-xl font-medium"> Explorer</h5>
         </div>
-        <div className="z-5 ml-10  mb-100 flex flex-col justify-start  items-center  ">
+        <div className="z-5 ml-10 flex flex-col justify-start  items-center  ">
           <div className="">
             <video
               loop

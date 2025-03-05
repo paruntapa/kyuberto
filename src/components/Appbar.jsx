@@ -42,7 +42,7 @@ const Appbar = forwardRef(function index(props, ref) {
         initial={{ y: "-100%", opacity: 0, }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut"}}
-        className="text-xl h-[120px] overflow-hidden w-[120px] p-10 pl-20 relative text-white">
+        className="text-xl h-[120px] w-[120px] p-10 pl-20 relative text-white">
           menu
         </motion.span>
         <Magnetic>

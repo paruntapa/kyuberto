@@ -9,6 +9,8 @@ import ReactLenis from "lenis/react";
 import Third from "@/components/Third";
 import VideoSec from "@/components/VideoSec";
 import {motion} from "framer-motion"
+import Socials from "@/components/Socials";
+import Projects from "@/components/Projects";
 
 
 export default function Home() {
@@ -17,8 +19,6 @@ export default function Home() {
   
   return (
     <ReactLenis root>
-    <div>
-      
     <span >
       <motion.video
       initial={{ scale: 0, opacity: 0 }}
@@ -42,7 +42,9 @@ export default function Home() {
     <VideoSec />
     <Secondary/>
     <Third/>
-    </div>
+    <Projects/>
+    <Socials/>
+    
     </ReactLenis>
   );
 }

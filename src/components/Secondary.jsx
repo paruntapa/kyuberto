@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button } from './ui/button'
+import Button from './Button';
 
 const Secondary = () => {
 
@@ -22,7 +22,7 @@ const Secondary = () => {
           <div>
         Cuberto is a leading digital product <br /> agency focused on branding, UI/UX <br /> design, mobile, and web <br /> development.
         </div>
-        <Button className='text-[32px] mt-13 p-30 rounded-full '>
+        <Button  className='text-[32px] font-semibold mt-13 p-20 w-[28vw] rounded-full border-1 border-black text-black  text-lg md:text-2xl ' padding='py-2 px-6 md:px-4 '>
           What we do
         </Button>
         </div>
