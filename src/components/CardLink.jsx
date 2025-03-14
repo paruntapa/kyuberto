@@ -33,6 +33,7 @@ export const CardLink1 = ({ imageUrl, href, title, icon }) => {
         transition={{ duration: 0.3, ease: "easeInOut" }}
       >
         <img
+          draggable="false"
           src={`${imageUrl}`}
           alt={`${imageUrl}`}
           className="rounded-3xl md:rounded-2xl object-cover w-80 md:w-76 h-60 md:h-56"

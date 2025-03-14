@@ -22,14 +22,14 @@ const Hero = () => {
     <section className="">
       <div
         id="start"
-        className=" z-10 grid grid-cols-2 gap-10 text-center mt-29 m-10"
+        className=" z-10  grid md:grid-cols-2 gap-10 text-center mt-30  md:mt-35 md:m-10"
         style={{
           fontFamily: "PP",
         }}
       >
         <div
           id="pratham"
-          className=" z-10 cols-span-2 flex justify-start ml-[13%]  p-10 h-[80vh] w-[80vw] text-9xl"
+          className=" z-10 md:cols-span-2 flex justify-start md:ml-[13%] p-10 h-[80vh] w-[80vw] text-4xl md:text-9xl"
         >
           <motion.span>
             <motion.span
@@ -82,7 +82,7 @@ const Hero = () => {
                   muted
                   width="200"
                   height="200"
-                  className="rounded-full "
+                  className="rounded-full p-7  md:p-0"
                   preload="none"
                 >
                   <source src="/videos/1.mp4" type="video/mp4" />

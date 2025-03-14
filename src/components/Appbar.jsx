@@ -29,7 +29,7 @@ const Appbar = forwardRef(function index(props, ref) {
         fontFamily: "PP",
       }}
     >
-      <div className="h-[120px] overflow-hidden whitespace-nowrap  p-10 text-white  text-2xl font-semibold">
+      <div className="h-[120px] invisible md:visible overflow-hidden whitespace-nowrap  p-10 text-white text-3xl md:text-2xl font-semibold">
         <motion.h2
           initial={{ x: "-100%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -43,7 +43,7 @@ const Appbar = forwardRef(function index(props, ref) {
           initial={{ y: "-100%", opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
-          className="text-xl h-[120px] w-[120px] p-10 pl-20 relative text-white"
+          className="invisible sm:visible text-xl h-[120px] w-[120px] p-10 pl-20  relative text-white"
         >
           menu
         </motion.span>

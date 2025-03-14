@@ -30,7 +30,7 @@ const VideoSec = () => {
   }, []);
 
   return (
-    <div id="videos" className="min-h-screen mt-29 bg-amber-400 z-0 ">
+    <div id="videos" className="min-h-screen md:mt-29 z-0 overflow-hidden ">
       <div
         id="vidcursor"
         className="z-8 opacity-0  tranform  -translate-x-1/2 -translate-y-1/2  flex items-center justify-center h-[7vw] w-[7vw] rounded-full bg-white fixed left-0 top-0  "
@@ -47,7 +47,7 @@ const VideoSec = () => {
           muted
           width="800"
           height="800"
-          className="  min-w-full min-h-full max-w-none"
+          className="  min-w-full min-h-full md:max-w-none"
           preload="none"
         >
           <source src="/videos/6.mp4" type="video/mp4" />

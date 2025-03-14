@@ -37,12 +37,12 @@ const Third = () => {
         style={{
           fontFamily: "PP",
         }}
-        className="z-10 text-[154px] space-y-2 p-10 pl-45 pt-18 text-white h-[80vh] rounded-t-2xl  flex justify-start items-center w-full  "
+        className="z-10 text-[50px] md:text-[154px] space-y-2 p-10  pl-20 md:pl-45  md:pt-18 text-white h-[80vh] rounded-t-2xl  flex justify-start items-center w-full  "
       >
         <span className=" ">
           Featured <br />
           <span className=" flex  justify-start ">
-            <span className="m-2">
+            <span className="p-10 md:m-2">
               <video
                 loop
                 autoPlay
@@ -64,7 +64,7 @@ const Third = () => {
 
       <div
         id="video"
-        className="flex gap-12 bottom-0 mr-70 justify-center pb-0 mb-0 min-h-[40vh] p-30  items-center"
+        className=" flex gap-12 bottom-0 mr-70 justify-center pb-0 mb-0 min-h-[40vh] p-30  items-center"
         style={{
           fontFamily: "PP",
         }}
@@ -75,7 +75,7 @@ const Third = () => {
         >
           <h5 className="text-xl font-medium"> Explorer</h5>
         </div>
-        <div className="z-5 ml-10 flex flex-col justify-start  items-center  ">
+        <div className="z-5  ml-10 flex flex-col justify-start  items-center  ">
           <div className="">
             <video
               loop
