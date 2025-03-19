@@ -30,7 +30,7 @@ const VideoSec = () => {
   }, []);
 
   return (
-    <div id="videos" className="min-h-screen md:mt-29 z-0 overflow-hidden ">
+    <div id="videos" className=" md:min-h-screen md:mt-29 z-0 w-full ">
       <div
         id="vidcursor"
         className="z-8 opacity-0  tranform  -translate-x-1/2 -translate-y-1/2  flex items-center justify-center h-[7vw] w-[7vw] rounded-full bg-white fixed left-0 top-0  "

@@ -88,8 +88,8 @@ const Appbar = forwardRef(function index(props, ref) {
                     fontFamily: "PP",
                   }}
                 >
-                  <div>
-                    <div className="text-gray-400  mb-10 font-light ">
+                  <div className="hidden md:block ">
+                    <div className="text-gray-400 mb-10 font-light ">
                       {" "}
                       Social media{" "}
                     </div>
@@ -158,7 +158,7 @@ const Appbar = forwardRef(function index(props, ref) {
                       <div className=" cursor-pointer"> <UnderLineText>info@cuberto.com </UnderLineText></div>
                     </span>
                   </div>
-                  <div className="">
+                  <div className=" w-[48rem] md:w-[20rem]">
                     <span className="text-gray-400 font-light "> Menu </span>
                     <div className="grid mt-5 grid-cols-1  text-[50px] mb-23">
                       {menu.map((s, idx) => (

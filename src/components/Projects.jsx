@@ -160,9 +160,9 @@ const Projects = () => {
         <div>
           <div
             id="dragcursor"
-            className="z-8 opacity-0  tranform  -translate-x-1/2 -translate-y-1/2  flex items-center justify-center h-[7vw] w-[7vw] rounded-full bg-black fixed left-0 top-0  "
+            className="z-8 h-[15vw] w-[15vw]  opacity-0  tranform  -translate-x-1/2 -translate-y-1/2  flex items-center justify-center md:h-[7vw] md:w-[7vw] rounded-full bg-black fixed left-0 top-0  "
           >
-            <h5 className="text-xl font-semibold cursor-grab select-none text-white">
+            <h5 className="text-xl  font-semibold cursor-grab select-none text-white">
               {" "}
               Drag{" "}
             </h5>

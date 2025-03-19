@@ -22,7 +22,7 @@ const Navbar = () => {
   return (
     <div className="overflow-hidden">
       <Drawer open={isOpen} onOpenChange={setIsOpen} direction="right">
-        <DrawerContent style={{ maxWidth: WIDTH }} className="bg-background ">
+        <DrawerContent style={{ maxWidth:  WIDTH }} className="bg-background ">
           <div className="grid grid-cols-1 gap-4 h-screen items-center mt-36 mr-30 m-25 mb-58">
             <div
               className="grid grid-cols-2 "
@@ -31,7 +31,7 @@ const Navbar = () => {
               }}
             >
               <div className="">
-                <span className="text-gray-400 font-light group/nav-item">
+                <span className=" text-gray-400 font-light group/nav-item">
                   {" "}
                   Social media{" "}
                 </span>

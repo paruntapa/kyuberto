@@ -31,7 +31,7 @@ const Third = () => {
   return (
     <section
       id="page1"
-      className=" min-h-[100vh] w-full rounded-t-[100px] bg-black/90 items-center "
+      className=" mt-[140%] md:mt-[0%]  w-full rounded-t-[100px] bg-black/90 items-center "
     >
       <div
         style={{
@@ -64,18 +64,19 @@ const Third = () => {
 
       <div
         id="video"
-        className=" flex gap-12 bottom-0 mr-70 justify-center pb-0 mb-0 min-h-[40vh] p-30  items-center"
+        className="flex gap-12 bottom-0 mr-70 justify-center pb-0 mb-0 min-h-[40vh] p-30  items-center"
         style={{
           fontFamily: "PP",
         }}
       >
         <div
           id="cursor"
-          className="z-8 opacity-0 cursor-pointer  tranform  -translate-x-1/2 -translate-y-1/2  flex items-center justify-center h-[7vw] w-[7vw] rounded-full bg-white fixed left-0 top-0  "
+          className=" z-8 opacity-0 cursor-pointer  tranform  -translate-x-1/2 -translate-y-1/2  flex items-center justify-center h-[15vw] m-5 md:h-[7vw] md:w-[7vw] rounded-full bg-white fixed left-0 top-0  "
         >
           <h5 className="text-xl font-medium"> Explorer</h5>
         </div>
-        <div className="z-5  ml-10 flex flex-col justify-start  items-center  ">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-6 ">
+        <div className="z-5  ml-10 flex flex-col justify-start items-center  ">
           <div className="">
             <video
               loop
@@ -83,7 +84,7 @@ const Third = () => {
               muted
               width="800"
               height="500"
-              className="rounded-4xl "
+              className="rounded-4xl"
               preload="none"
             >
               <source src="/videos/4.mp4" type="video/mp4" />
@@ -212,7 +213,7 @@ const Third = () => {
         </div>
 
         {/* second section */}
-        <div className="z-5  text-[33px]  flex flex-col justify-start items-center">
+        <div className="z-5 md:mt-30  text-[33px]  flex flex-col justify-start items-center">
           <div>
             <div>
               <video
@@ -327,6 +328,7 @@ const Third = () => {
               </span>
             </div>
           </div>
+         </div>
         </div>
       </div>
     </section>
