@@ -1,5 +1,7 @@
 import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
+import { useInView } from "framer-motion";
+import { AnimateLettersSlideUp } from "./ui/animation";
 
 const Third = () => {
   useEffect(() => {
@@ -28,6 +30,12 @@ const Third = () => {
     });
   }, []);
 
+  const container = useRef(null)
+
+  const inView = useInView(container,  {
+    margin: "100px 100px -50px -50px"
+  })
+  
   return (
     <section
       id="page1"
@@ -39,8 +47,13 @@ const Third = () => {
         }}
         className="z-10 text-[50px] md:text-[154px] space-y-2 p-10  pl-20 md:pl-45  md:pt-18 text-white h-[80vh] rounded-t-2xl  flex justify-start items-center w-full  "
       >
-        <span className=" ">
-          Featured <br />
+        <span ref={container}>
+          <AnimateLettersSlideUp
+            sentence="Featured"
+            inView={inView}
+            speed={1}
+            className="2xl:pr-1 xl:pr-5 lg:pr-4 pr-1"
+          />
           <span className=" flex  justify-start ">
             <span className="p-10 md:m-2">
               <video
@@ -55,8 +68,14 @@ const Third = () => {
                 <source src="/videos/3.mp4" type="video/mp4" />
               </video>
             </span>
-            <span className="">
-              <i>projects</i>
+            <span>
+              <AnimateLettersSlideUp
+              sentence="projects"
+              inView={inView}
+              speed={1}
+              className="2xl:pr-1 italic xl:pr-5 lg:pr-4 pr-1"
+              motionClass={'p-3'}
+              />
             </span>
           </span>
         </span>
@@ -71,7 +90,7 @@ const Third = () => {
       >
         <div
           id="cursor"
-          className=" z-8 opacity-0 cursor-pointer  tranform  -translate-x-1/2 -translate-y-1/2  flex items-center justify-center h-[15vw] m-5 md:h-[7vw] md:w-[7vw] rounded-full bg-white fixed left-0 top-0  "
+          className=" z-8 opacity-0 w-[15vw] pointer-events-none  tranform  -translate-x-1/2 -translate-y-1/2  flex items-center justify-center h-[15vw] md:h-[7vw] md:w-[7vw] rounded-full bg-white fixed left-0 top-0  "
         >
           <h5 className="text-xl font-medium"> Explorer</h5>
         </div>
