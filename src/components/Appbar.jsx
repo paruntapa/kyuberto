@@ -1,8 +1,9 @@
-import React, { forwardRef, useState } from "react";
+import React, { forwardRef, useRef, useState } from "react";
 import Magnetic from "./Magnetic";
 import { Sheet, SheetTitle, SheetContent } from "@/components/ui/sheet";
-import { motion } from "motion/react";
+import { motion, useInView } from "motion/react";
 import UnderLineText from "./ui/UnderLineText";
+import { AnimateLettersSlideUp } from "./ui/animation";
 
 const Appbar = forwardRef(function index(props, ref) {
   const [isActive, setIsActive] = useState(false);
@@ -22,6 +23,12 @@ const Appbar = forwardRef(function index(props, ref) {
 
   const menu = ["What we do", "Projects", "Company", "Tutorials", "Contacts"];
 
+  const container = useRef(null);
+
+  const inView = useInView(container,  {
+    margin: "100px 100px -50px -50px"
+  })
+
   return (
     <div
       className="flex z-13 justify-between m-3 fixed top-0  left-0 w-full mix-blend-difference"
@@ -38,15 +45,15 @@ const Appbar = forwardRef(function index(props, ref) {
           cuberto
         </motion.h2>
       </div>
-      <div className="flex gap-6 ">
-        <motion.span
-          initial={{ y: "-100%", opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.5, ease: "easeInOut" }}
-          className="invisible sm:visible text-xl h-[120px] w-[120px] p-10 pl-20  relative text-white"
-        >
-          menu
-        </motion.span>
+      <div className="flex gap-6 items-center text-white ">
+        <span ref={container} className="invisible sm:visible  text-xl relative text-white">
+          <AnimateLettersSlideUp
+            sentence="menu"
+            inView={true}
+            speed={1}
+          />
+        </span>
+        
         <Magnetic>
           <div
             ref={ref}

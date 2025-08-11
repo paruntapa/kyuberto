@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { motion } from "motion/react";
-import { AnimateWordSlideUp } from "./ui/animation";
+import { AnimateScale, AnimateWordSlideUp } from "./ui/animation";
 import { useInView } from "framer-motion";
 
 const Hero = () => {
@@ -31,15 +31,13 @@ const Hero = () => {
             <div className="flex flex-col md:flex-row items-center justify-center md:justify-between ">
               <span
               >
-                <video
-                  loop
-                  autoPlay
-                  muted
-                  className="rounded-full w-[140px] h-[100px] md:w-[200px] md:h-[140px]"
-                  preload="none"
-                >
-                  <source src="/videos/1.mp4" type="video/mp4" />
-                </video>
+                <AnimateScale
+                  src="/videos/1.mp4"
+                  width={200}
+                  height={380}
+                  className="rounded-full ml-8 mt-2"
+                  inView={inView}
+                />
               </span>
               <span className="text-center md:text-left">
                 <AnimateWordSlideUp

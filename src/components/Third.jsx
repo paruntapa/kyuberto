@@ -1,7 +1,7 @@
 import gsap from "gsap";
 import React, { useEffect, useRef } from "react";
 import { useInView } from "framer-motion";
-import { AnimateLettersSlideUp } from "./ui/animation";
+import { AnimateLettersSlideUp, AnimateScale } from "./ui/animation";
 
 const Third = () => {
   useEffect(() => {
@@ -54,27 +54,22 @@ const Third = () => {
             speed={1}
             className="2xl:pr-1 xl:pr-5 lg:pr-4 pr-1"
           />
-          <span className=" flex  justify-start ">
-            <span className="p-10 md:m-2">
-              <video
-                loop
-                autoPlay
-                muted
-                width="250"
-                height="300"
-                className="rounded-full "
-                preload="none"
-              >
-                <source src="/videos/3.mp4" type="video/mp4" />
-              </video>
+          <span className=" flex justify-start ">
+            <span className="md:m-2">
+              <AnimateScale
+                src="/videos/3.mp4"
+                width={250}
+                height={380}
+                className="rounded-full"
+                inView={inView}
+              />
             </span>
             <span>
               <AnimateLettersSlideUp
-              sentence="projects"
+              sentence="Projects"
               inView={inView}
               speed={1}
-              className="2xl:pr-1 italic xl:pr-5 lg:pr-4 pr-1"
-              motionClass={'p-3'}
+              className="italic pr-4"
               />
             </span>
           </span>

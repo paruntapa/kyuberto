@@ -3,7 +3,7 @@
 import { useInView, motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { Dispatch, ReactNode, SetStateAction, useRef } from "react";
-import { slideUpLineInterval, slideUpWordsInterval } from "./framer";
+import { opacity, slideUpLineInterval, slideUpWordsInterval, scale } from "./framer";
 
 export const AnimateWordSlideUp = (
   {sentence,
@@ -15,7 +15,7 @@ export const AnimateWordSlideUp = (
   return (
     <p className="flex flex-wrap lg:gap-x-5 gap-x-2">
       {sentence.split(" ").map((x, index) => (
-        <span key={index} className={`flex overflow-hidden relative justify-start 2xl:pr-6 xl:pr-5 lg:pr-4 pr-1 ${className}`}>
+        <span key={index} className={`flex overflow-y-hidden overflow-x-visible relative justify-start 2xl:pr-6 xl:pr-5 lg:pr-4 pr-1 ${className}`}>
           <motion.span
             variants={slideUpWordsInterval}
             custom={index + 1 * speed}
@@ -30,6 +30,42 @@ export const AnimateWordSlideUp = (
   );
 };
 
+export const AnimateScale = ({
+  src,
+  type = "video/mp4",
+  width = 250,
+  height = 300,
+  className = "",
+  inView = true,
+  delayIndex = 0,
+  loop = true,
+  autoPlay = true,
+  muted = true,
+  preload = "none",
+}) => {
+  return (
+    <motion.span
+      variants={scale}
+      custom={delayIndex + 4}
+      initial="initial"
+      animate={inView ? "animate" : "exit"}
+      style={{ display: "inline-block" }}
+   >
+      <video
+        loop={loop}
+        autoPlay={autoPlay}
+        muted={muted}
+        width={width}
+        height={height}
+        className={className}
+        preload={preload}
+      >
+        <source src={src} type={type} />
+      </video>
+    </motion.span>
+  );
+};
+
 export const AnimateLettersSlideUp = ({ sentence, inView, speed, className, motionClass }) => {
   const characters = Array.from(sentence ?? "");
   return (
@@ -37,13 +73,13 @@ export const AnimateLettersSlideUp = ({ sentence, inView, speed, className, moti
       {characters.map((char, index) => (
         <span
           key={`${char}-${index}`}
-          className={`flex overflow-hidden relative justify-start ${className ?? ""}`}
+          className={`flex overflow-y-hidden overflow-x-visible relative justify-start ${className ?? ""}`}
         >
           <motion.span
             variants={slideUpWordsInterval}
             custom={index + 1 * (speed ?? 1)}
             initial="initial"
-            animate={inView ? "animate" : "exit"}
+            animate={inView ? "animate" : "animate"}
             className={motionClass}
           >
             {char === " " ? "\u00A0" : char}
@@ -62,7 +98,7 @@ export const AnimateLineSlideUp = (
   return (
     <p className="flex flex-wrap gap-x-2">
       {sentence.split(" ").map((x, index) => (
-        <span key={index} className="flex overflow-hidden relative justify-start pr-1">
+        <span key={index} className="flex overflow-y-hidden overflow-x-visible relative justify-start pr-1">
           <motion.span
             variants={slideUpLineInterval}
             custom={index + 1 * speed}
