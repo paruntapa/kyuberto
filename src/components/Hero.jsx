@@ -1,5 +1,4 @@
 import React, { useRef } from "react";
-import { motion } from "motion/react";
 import { AnimateScale, AnimateWordSlideUp } from "./ui/animation";
 import { useInView } from "framer-motion";
 

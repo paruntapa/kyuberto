@@ -4,6 +4,12 @@ import { useInView } from "framer-motion";
 import { AnimateLettersSlideUp, AnimateScale } from "./ui/animation";
 
 const Third = () => {
+  const container = useRef(null)
+
+  const inView = useInView(container,  {
+    margin: "100px 100px -50px -50px"
+  })
+  
   useEffect(() => {
     const cursor = document.querySelector("#cursor");
     const video = document.querySelector("#video ");
@@ -30,12 +36,7 @@ const Third = () => {
     });
   }, []);
 
-  const container = useRef(null)
-
-  const inView = useInView(container,  {
-    margin: "100px 100px -50px -50px"
-  })
-  
+ 
   return (
     <section
       id="page1"

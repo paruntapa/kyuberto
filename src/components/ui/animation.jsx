@@ -79,7 +79,7 @@ export const AnimateLettersSlideUp = ({ sentence, inView, speed, className, moti
             variants={slideUpWordsInterval}
             custom={index + 1 * (speed ?? 1)}
             initial="initial"
-            animate={inView ? "animate" : "animate"}
+            animate={inView ? "animate" : "exit"}
             className={motionClass}
           >
             {char === " " ? "\u00A0" : char}
